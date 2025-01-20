@@ -3,14 +3,14 @@ import {SolanaTracker} from "solana-swap";
 import {performSwap, SOL_ADDR} from "./lib.js";
 import base58 from "bs58";
 
-const RPC_URL = ""; // Quicknode or Helius give good rpc urls
-const PRIVKEY = ""; // the private key of the account who will buy and sell, in base58 (phantom export for example)
-const TOKEN_ADDR = ""; // Put the address of the token you want to bump here
+const RPC_URL = "https://chaotic-damp-pallet.solana-mainnet.quiknode.pro/976de73889c863ca12f5ddb9caef83cbfb876dbc"; // Quicknode or Helius give good rpc urls
+const PRIVKEY = "3F56JuGtjje7U4fTsHDhSPk61eFv7HvrY1NqPk4N5g6oGA372TXEbGmQQmUNyZufhaLpXFCFGQAr2y2T4KdnL6b7"; // the private key of the account who will buy and sell, in base58 (phantom export for example)
+const TOKEN_ADDR = "7hKiMNhm4tGShwW77GihAaT7t75X6r3sS9XLiQQNpump"; // Put the address of the token you want to bump here
 
 const SOL_BUY_AMOUNT = 0.011; // here you can choose to increase/decrease the buy amount
 
 const FEES = 0.0005; // here you can adjust the fees
-const SLIPPAGE = 20; // here you can adjust the slippage
+const SLIPPAGE = 1; // here you can adjust the slippage
 
 async function swap(tokenIn, tokenOut, solanaTracker, keypair, connexion, amount) {
 
